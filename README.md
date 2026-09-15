@@ -16,15 +16,21 @@ GitHub Pages serves it from the default branch at the repository root, so a push
 | `4k-video-editor/roadmap/` | What is being considered for that app, plus the vote |
 | `retro-music-player/` | A holding page. It says there is nothing to install and no date, because there isn't |
 | `roadmap/` | A forwarding page. This URL was public before roadmaps became per-app |
-| `privacy/4k-video-editor.html` | The privacy policy |
+| `privacy/4k-video-editor.html` | That app's privacy policy |
+| `privacy/retro-music-player.html` | That app's privacy policy |
 | `404.html` | Served by Pages for anything else |
 
 ## Things to know before editing
 
-- **The privacy policy here is a second copy.** The one Google Play points at is still the Weebly
-  page (`wizefilmmaking.weebly.com/privacy-policy.html`), and both must say the same thing, because
-  Play cross-checks the policy against the Data safety form. If one changes, change both — or move
-  the Console to this URL and retire the Weebly copy.
+- **Each app has its own policy, and they are not in the same situation.** The 4k Video Editor's is
+  a **second copy**: the one Google Play points at is still the Weebly page
+  (`wizefilmmaking.weebly.com/privacy-policy.html`), and both must say the same thing, because Play
+  cross-checks the policy against the Data safety form. If one changes, change both — or move the
+  Console to this URL and retire the Weebly copy. Retro Player's is the **only** copy, so it is the
+  URL its Console listing should point at when that listing exists.
+- **The two policies describe different apps and are meant to differ.** The editor has Crashlytics;
+  the player has no crash reporting at all. The editor asks for no media permission; the player asks
+  to read audio files and explains why. Do not "harmonise" them.
 - **The roadmap is per app.** Each app owns its own, under the app's directory. There is no global
   one, and no Roadmap entry in the nav: the nav is the apps.
 - **The vote is a form that opens the visitor's mail app**, with their choice filled in. It needs no
