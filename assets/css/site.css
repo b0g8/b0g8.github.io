@@ -27,7 +27,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+/* height:auto is load-bearing. Every <img> here carries width/height attributes so the browser can
+   reserve the space before the file arrives; without height:auto, max-width shrinks the width to
+   the column and the attribute keeps the height, and the picture comes out tall and squeezed. */
+img { max-width: 100%; height: auto; display: block; }
 
 a { color: var(--brand); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -141,6 +144,7 @@ section:first-of-type { border-top: 0; }
 
 .shots {
   display: grid;
+  align-items: end;
   grid-auto-flow: column;
   grid-auto-columns: 232px;
   gap: 16px;
