@@ -1,6 +1,6 @@
 # b0g8.github.io
 
-The Photocraft website. Plain HTML and one stylesheet — no build step, no framework, and **no
+The website for b0g8's Android apps. Plain HTML and one stylesheet — no build step, no framework, and **no
 external requests of any kind**: no web fonts, no CDN, no analytics. That is deliberate. The apps
 this site is about claim not to track anyone, and a site that loads a font from someone else's
 server while saying so is making the claim untrue in its own footer.
@@ -40,9 +40,17 @@ GitHub Pages serves it from the default branch at the repository root, so a push
   that is abandoned comes off the page rather than sitting at "next up" for a year.
 - **Screenshots** are downscaled from `docs/release/screenshots/` in the app repo (600px wide,
   JPEG). Re-export them from there rather than editing the copies here.
-- **The brand name is "Photocraft"**, which appears in the header, the footer and the `<title>` of
-  every page. Google Play still publishes the app under the legacy developer name; if the two are
-  ever reconciled, this is the place to change.
+- **There is no brand name.** "Photocraft" was the header, footer and `<title>` of every page until
+  2026-09-15, when the owner removed it: everything already lives under the `b0g8` handle and a
+  third name — beside `Photocraft` in the repo `LICENSE` and `WIZE FILM MAKING` on the Play listing
+  — was one more than anyone needed. The header's left slot is now `b0g8`, which is the site's
+  address and its home link; the copyright line says the same.
+- **The Donate button goes to `paypal.me/RusBogdan`** and sits in the top row of every page. It is
+  safe under Play's Payments policy for one specific reason, and the reason has to stay true: a
+  contribution where 100% goes to the developer and that **grants no digital content or service**
+  is a peer-to-peer payment, not an in-app purchase, so Play Billing is not required for it. The
+  day a donation unlocks anything, this link becomes steering around Play Billing on a listing with
+  a million downloads. **Nothing in the app links to PayPal directly**, and nothing should.
 
 ## Working on it locally
 

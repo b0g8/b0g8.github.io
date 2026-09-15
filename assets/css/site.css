@@ -59,9 +59,14 @@ a:hover { text-decoration: underline; }
   font-size: 17px;
 }
 .brand:hover { text-decoration: none; color: var(--brand); }
-.nav { display: flex; gap: 22px; font-size: 15px; }
+.nav { display: flex; align-items: center; gap: 22px; font-size: 15px; }
 .nav a { color: var(--text-muted); }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--text); text-decoration: none; }
+
+/* The one call to action in the header. Sized down from .btn so it sits inside the header's
+   62px band without stretching it, and it is the only coloured thing in the row. */
+.nav-cta, .nav a.nav-cta { padding: 7px 17px; font-size: 14px; color: #04102c; }
+.nav a.nav-cta:hover { color: #04102c; }
 
 /* ---------- type ---------- */
 
@@ -197,7 +202,8 @@ section:first-of-type { border-top: 0; }
 @media (max-width: 600px) {
   .hero { padding: 52px 0 40px; }
   section { padding: 44px 0; }
-  .nav { gap: 16px; font-size: 14px; }
+  .nav { gap: 14px; font-size: 14px; }
+  .nav-cta, .nav a.nav-cta { padding: 6px 14px; }
 }
 
 /* ---------- vote form ---------- */
