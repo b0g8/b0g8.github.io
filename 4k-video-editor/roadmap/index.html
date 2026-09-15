@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>4k Video Editor — What's next</title>
+<meta name="description" content="What is being considered next in 4k Video Editor, and a vote on which comes first.">
+<meta property="og:title" content="4k Video Editor — What's next">
+<meta property="og:description" content="What is being considered next, and a vote on which comes first.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://b0g8.github.io/4k-video-editor/roadmap/">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Photocraft</a>
+    <nav class="nav">
+      <a href="/4k-video-editor/" aria-current="page">4k Video Editor</a>
+      <a href="/retro-music-player/">Retro Music Player</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="small muted" style="margin-bottom:10px"><a href="/4k-video-editor/">4k Video Editor</a></p>
+    <h1>What's next</h1>
+    <p class="lede">This editor is built by one person, so the order matters more than the list
+      does. Below are the big things under consideration — pick the one you want first.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Being considered</h2>
+    <p class="lede">Real candidates, not promises. Which ones get built, and in what order, is what
+      the vote is for.</p>
+    <div class="items" style="margin-top:22px">
+
+      <div class="item">
+        <div class="item-head"><h3>Colour curves</h3><span class="state">Candidate</span></div>
+        <p>Hands-on control of the grade, beyond picking a look.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><h3>Describe the film you want</h3><span class="state">Candidate</span></div>
+        <p>Say — or type — what you are after, and have a first cut assembled from the footage on
+          your phone for you to take over.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><h3>Voiceover</h3><span class="state">Candidate</span></div>
+        <p>Record narration over the film, on its own track under the music.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><h3>Green screen</h3><span class="state">Candidate</span></div>
+        <p>Key out a background and put something else behind it.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><h3>Picture-in-picture</h3><span class="state">Candidate</span></div>
+        <p>A second clip over the first — a reaction, an inset, a logo.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Vote</h2>
+    <p class="lede">Pick one. The results are read by one person and are not published here.</p>
+
+    <!--
+      INTERIM: this form opens the visitor's mail app with their choice filled in. Replace the
+      submit handler with a real form (Google Forms, Tally) when one exists and nothing else on the
+      page changes. It deliberately does not embed a form in an <iframe>: that would be the first
+      external request this site makes, and "loads nothing from anywhere else" is a claim the
+      landing page used to make and the whole site still keeps.
+    -->
+    <form class="vote" id="vote" style="margin-top:26px">
+      <fieldset>
+        <legend class="sr-only">Which should come first?</legend>
+        <label><input type="radio" name="choice" value="Colour curves" checked> Colour curves</label>
+        <label><input type="radio" name="choice" value="Describe the film you want"> Describe the film you want</label>
+        <label><input type="radio" name="choice" value="Voiceover"> Voiceover</label>
+        <label><input type="radio" name="choice" value="Green screen"> Green screen</label>
+        <label><input type="radio" name="choice" value="Picture-in-picture"> Picture-in-picture</label>
+        <label><input type="radio" name="choice" value="Something else"> Something else</label>
+      </fieldset>
+
+      <label class="field" for="other">Something else, or anything you want to add</label>
+      <textarea id="other" name="other" rows="4" placeholder="What is missing for you?"></textarea>
+
+      <button class="btn" type="submit">Send</button>
+    </form>
+
+    <div class="note" style="margin-top:30px">
+      <strong>The honest disclaimer.</strong> This is not a contract. The list can change, an item
+      can turn out to be far harder than it looked, and some things get built out of order because
+      they unblock something else. What the vote buys is that the order tries to follow what people
+      ask for — and that this page keeps saying what is actually happening.
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Photocraft</span>
+    <span>
+      <a href="/privacy/4k-video-editor.html">Privacy</a> ·
+      <a href="/4k-video-editor/">4k Video Editor</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('vote').addEventListener('submit', function (event) {
+    event.preventDefault();
+    var data = new FormData(event.target);
+    var choice = data.get('choice') || '';
+    var other = (data.get('other') || '').trim();
+    var body = 'I would like this first: ' + choice + '\n\n' + (other ? other + '\n' : '');
+    window.location.href = 'mailto:wizefilmmaking@gmail.com'
+      + '?subject=' + encodeURIComponent('4k Video Editor — my vote')
+      + '&body=' + encodeURIComponent(body);
+  });
+</script>
+
+</body>
+</html>

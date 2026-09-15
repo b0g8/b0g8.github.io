@@ -13,8 +13,9 @@ GitHub Pages serves it from the default branch at the repository root, so a push
 |---|---|
 | `index.html` | Landing page: who this is, and the two apps |
 | `4k-video-editor/` | The app page — pitch, screenshots, what it does, where to report a bad export |
+| `4k-video-editor/roadmap/` | What is being considered for that app, plus the vote |
 | `retro-music-player/` | A holding page. It says there is nothing to install and no date, because there isn't |
-| `roadmap/` | Shipped / being built next / being considered, plus the vote |
+| `roadmap/` | A forwarding page. This URL was public before roadmaps became per-app |
 | `privacy/4k-video-editor.html` | The privacy policy |
 | `404.html` | Served by Pages for anything else |
 
@@ -24,9 +25,16 @@ GitHub Pages serves it from the default branch at the repository root, so a push
   page (`wizefilmmaking.weebly.com/privacy-policy.html`), and both must say the same thing, because
   Play cross-checks the policy against the Data safety form. If one changes, change both — or move
   the Console to this URL and retire the Weebly copy.
-- **The vote is a `mailto:` link.** It needs no backend and it works today. When a real form exists
-  (Tally, Google Forms, anything that collects and counts), swap it in — there is a comment in
-  `roadmap/index.html` marking the spot.
+- **The roadmap is per app.** Each app owns its own, under the app's directory. There is no global
+  one, and no Roadmap entry in the nav: the nav is the apps.
+- **The vote is a form that opens the visitor's mail app**, with their choice filled in. It needs no
+  backend and works today. When a real form exists (Tally, Google Forms, anything that collects and
+  counts), replace the submit handler — the spot is marked INTERIM in
+  `4k-video-editor/roadmap/index.html`. Link out rather than embedding: an `<iframe>` would be the
+  first external request this site makes.
+- **Nothing on this site asks for money.** In-app donations are deliberately not mentioned anywhere
+  except the privacy policy, which has to describe them because Play cross-checks that document
+  against the data safety form.
 - **The roadmap must stay true.** Its whole value is that "being considered" really does mean
   considered, and that "next up" is not marketing. An item that ships moves to Shipped; an item
   that is abandoned comes off the page rather than sitting at "next up" for a year.
