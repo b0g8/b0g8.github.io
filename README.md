@@ -14,7 +14,7 @@ GitHub Pages serves it from the default branch at the repository root, so a push
 | `index.html` | Landing page: who this is, and the two apps |
 | `4k-video-editor/` | The app page — pitch, screenshots, what it does, where to report a bad export |
 | `4k-video-editor/roadmap/` | What is being considered for that app, plus the vote |
-| `retro-music-player/` | A holding page. It says there is nothing to install and no date, because there isn't |
+| `retro-music-player/` | The app page — pitch, screenshots, what it does. The Play link is on the landing page's card |
 | `roadmap/` | A forwarding page. This URL was public before roadmaps became per-app |
 | `privacy/4k-video-editor.html` | That app's privacy policy |
 | `privacy/retro-music-player.html` | That app's privacy policy |
@@ -26,8 +26,8 @@ GitHub Pages serves it from the default branch at the repository root, so a push
   a **second copy**: the one Google Play points at is still the Weebly page
   (`wizefilmmaking.weebly.com/privacy-policy.html`), and both must say the same thing, because Play
   cross-checks the policy against the Data safety form. If one changes, change both — or move the
-  Console to this URL and retire the Weebly copy. Retro Player's is the **only** copy, so it is the
-  URL its Console listing should point at when that listing exists.
+  Console to this URL and retire the Weebly copy. Retro Player's is the **only** copy, and it is the
+  URL its Play listing points at.
 - **The two policies describe different apps and are meant to differ.** The editor has Crashlytics;
   the player has no crash reporting at all. The editor asks for no media permission; the player asks
   to read audio files and explains why. Do not "harmonise" them.
