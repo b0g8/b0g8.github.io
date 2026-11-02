@@ -153,6 +153,7 @@ section:first-of-type { border-top: 0; }
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
 }
+.shots.wide { grid-auto-columns: min(460px, 86vw); }
 .shots figure { margin: 0; scroll-snap-align: start; }
 .shots img { border-radius: 12px; border: 1px solid var(--line); background: #000; }
 .shots figcaption { font-size: 13px; color: var(--text-muted); margin-top: 9px; }
